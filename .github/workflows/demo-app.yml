@@ -55,6 +55,10 @@ jobs:
           model: 'iPhone 13 Pro'
           os_version: '>=15.0'
 
+      - uses: actions/cache@v2
+        with:
+          path: ./example/ios/build
+
       - name: Run Owl Build
         run: yarn owl:build:ios
         working-directory: ./example
