@@ -57,6 +57,7 @@ jobs:
 
       - uses: actions/cache@v2
         with:
+          key: ${{ runner.os }}-ios-build-cache
           path: ./example/ios/build
 
       - name: Run Owl Build
